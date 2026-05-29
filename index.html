@@ -223,6 +223,7 @@ body {
   display: flex; flex-direction: column;
   align-items: center; justify-content: center;
   gap: 20px;
+  touch-action: manipulation;
 }
 #pin-overlay.hidden { display: none; }
 .pin-logo { font-size: 36px; margin-bottom: 4px; }
@@ -237,6 +238,7 @@ body {
 .pin-keypad {
   display: grid; grid-template-columns: repeat(3, 64px);
   gap: 12px;
+  touch-action: manipulation;
 }
 .pin-key {
   width: 64px; height: 64px; border-radius: 50%;
@@ -286,7 +288,7 @@ body {
 
 <div class="page-header">
   <div class="page-title">📊 하나 대시보드</div>
-  <div class="page-sub">2026-05-29 23:03 기준 · 자동갱신 08:59 / 12:00 / 15:30</div>
+  <div class="page-sub">2026-05-29 23:09 기준 · 자동갱신 08:59 / 12:00 / 15:30</div>
 </div>
 
 
@@ -411,18 +413,18 @@ body {
 </a><a class="news-item" href="https://news.google.com/rss/articles/CBMiTkFVX3lxTE8wSEhtYmNGQ082SXY0SUN3aEtsZnYycjdnVzBJQkdIWWgyUGJIaFJOTXNzcWZlRWxqTkNVYkdFc0x0X1NSOEJvRHNIWk5kUQ?oc=5" target="_blank" rel="noopener">
   <div class="news-title">[ET특징주] 젠슨황 방한… LG전자, '제2의 깐부회동' 기대감에 주가 26% 폭등</div>
   <div class="news-meta"><span class="news-src">전자신문</span><span class="news-time">05-29 12:44</span></div>
-</a><a class="news-item" href="https://news.google.com/rss/articles/CBMiakFVX3lxTE9TZ1N3aC01MTB6TmFFV284bmJCN2g1UzhVRV9CT0t3TjNtN0JfR2FHM2t4VW5kZUFqRlVEY3ZEaTg4LUJjZXVaVm45WDVob1dBVlZueUNWdlFtcFg2cHZvWGxrSkQwVTZwdmc?oc=5" target="_blank" rel="noopener">
-  <div class="news-title">앤트로픽, 구글 TPU 확보 위해 54조 초대형 대출 추진..."사상 최대 규모"</div>
-  <div class="news-meta"><span class="news-src">AI타임스</span><span class="news-time">05-29 14:03</span></div>
 </a><a class="news-item" href="https://news.google.com/rss/articles/CBMigAFBVV95cUxQZWpnMnpKZG5RV3ItYkI2UEVWVlpQajVGRjVSQmVMVGpqcGdYU1JXSTk5WE9ZaDRWVnlzNTQtVHdTbE52MjFRdjM0VlZHX2VYQmNMXy1RWmh1VXJjc0F0Q25sQk5GV0pLc19RQ25PWmUzWkd1NlhYdm5EUGs3ZzlGZA?oc=5" target="_blank" rel="noopener">
   <div class="news-title">“채권시장 ‘큰손’이 돌아섰다”...국민연금, 국내 채권 점진적 축소 방침</div>
   <div class="news-meta"><span class="news-src">조선일보</span><span class="news-time">05-29 21:26</span></div>
-</a><a class="news-item" href="https://news.google.com/rss/articles/CBMidEFVX3lxTE9ndUphTklmVXJhV0hHbEJwSjlGUHlBeUdGMkpqalExdXl0M1JZX1ZyWXhVVWlCVWkzaE1nMTgxMTJ2SEVhM3BUbEFYOVdlaUxLYlZKcndDc2VRWnlhYkVDSDR5SElZM2Fia09TWEVaNmVBallW0gF0QVVfeXFMUFVoNmFmR2FSRUVwQ3U3ZGRqLWh0Vl9jZ05ZNmNMUnQ2ekV5SFFaQ3M3WHYycVNGVThmV0ttRkUyMlZtejJxQnpEUWxPUFl1UkdJdUFWWjRfMzNJeVY5RkpEeGV6Tl9DREppRnhzeUthLTlDRUU?oc=5" target="_blank" rel="noopener">
-  <div class="news-title">금융위 "국민참여형 국민성장펀드 완판‥10명 중 4명 서민"</div>
-  <div class="news-meta"><span class="news-src">MBC 뉴스</span><span class="news-time">05-29 19:20</span></div>
+</a><a class="news-item" href="https://news.google.com/rss/articles/CBMiakFVX3lxTE9TZ1N3aC01MTB6TmFFV284bmJCN2g1UzhVRV9CT0t3TjNtN0JfR2FHM2t4VW5kZUFqRlVEY3ZEaTg4LUJjZXVaVm45WDVob1dBVlZueUNWdlFtcFg2cHZvWGxrSkQwVTZwdmc?oc=5" target="_blank" rel="noopener">
+  <div class="news-title">앤트로픽, 구글 TPU 확보 위해 54조 초대형 대출 추진..."사상 최대 규모"</div>
+  <div class="news-meta"><span class="news-src">AI타임스</span><span class="news-time">05-29 14:03</span></div>
 </a><a class="news-item" href="https://news.google.com/rss/articles/CBMickFVX3lxTE1LZDROX1lXRU9FOFRUci13cXF4S1pzbXZ4bTAtaWhoaFUxS0Z4MGtOcnRtbHFNLUY1MkJPU3ZDSGh0dGo2ZW9oUjFvRVFaZmRVLS1NblhLR01salhTTUNlTmJZV0VZWTJpSGZ5OUxyM2tEdw?oc=5" target="_blank" rel="noopener">
   <div class="news-title">“미국 스벅, 인종차별 논란에 매장 8천곳 문 닫고 직원 교육…정용진, 결단해야”</div>
   <div class="news-meta"><span class="news-src">한겨레</span><span class="news-time">05-29 11:33</span></div>
+</a><a class="news-item" href="https://news.google.com/rss/articles/CBMi7wFBVV95cUxNU29hTFdWcVNPS1Bmd3BScXVkdnJadjJ6OHNLYzJqeGFPc1VVT2hmRlRlY09rOHhKMnZnS3FBZEZVbE1HTmhNWlZnbnA0YTF6Nm9xZjdlSzh3SmpXaWduUHJrblpzZllldWhmN3VSYkVEem9sV0ZIWldXTGl1SUQyWGxwaWtRZi1SU0lDdk1LWE8xaF93amUxRjBGVHNvd2RUSlAwOGE0R3hNUEhsUm9DbXpEcmRmdHZhWDl4RlJtTlJOUTlxOUtOM1o1eW1oX2MtNm95RTZvaDNNNzNhdGliNzREQzJDVm5ucHMwRUFkTQ?oc=5" target="_blank" rel="noopener">
+  <div class="news-title">삼성전자, 세계 최초 HBM4E 12단 샘플 출하</div>
+  <div class="news-meta"><span class="news-src">samsung.com</span><span class="news-time">05-29 08:14</span></div>
 </a>
 
 <!-- ④ 코인 포지션 -->
@@ -432,15 +434,15 @@ body {
   <div class="coin-header">
     <span class="coin-name">ATOM</span>
     <span style='font-size:10px;color:#22c55e;background:#052e16;padding:1px 5px;border-radius:3px'>LIVE</span>
-    <span class="coin-pnl" style="color:#ef4444">-6.02%</span>
+    <span class="coin-pnl" style="color:#ef4444">-6.08%</span>
   </div>
   <div class="coin-body">
     <div class="coin-row2">
       <span class="label2">수량</span><span>35개</span>
       <span class="label2">매수가</span><span>3,164원</span>
-      <span class="label2">현재가</span><span style="color:#ef4444">2,974원</span>
+      <span class="label2">현재가</span><span style="color:#ef4444">2,972원</span>
     </div>
-    <div class="coin-pnl-amt" style="color:#ef4444">평가손익: -6,668원</div>
+    <div class="coin-pnl-amt" style="color:#ef4444">평가손익: -6,738원</div>
     <div class="coin-levels">
       <span class="lvl sl">손절 2,848</span>
       <span class="lvl t1">1차 3,639</span>
@@ -451,15 +453,15 @@ body {
   <div class="coin-header">
     <span class="coin-name">XRP</span>
     <span style='font-size:10px;color:#22c55e;background:#052e16;padding:1px 5px;border-radius:3px'>LIVE</span>
-    <span class="coin-pnl" style="color:#ef4444">-0.65%</span>
+    <span class="coin-pnl" style="color:#ef4444">-0.80%</span>
   </div>
   <div class="coin-body">
     <div class="coin-row2">
       <span class="label2">수량</span><span>35개</span>
       <span class="label2">매수가</span><span>1,946원</span>
-      <span class="label2">현재가</span><span style="color:#ef4444">1,933원</span>
+      <span class="label2">현재가</span><span style="color:#ef4444">1,930원</span>
     </div>
-    <div class="coin-pnl-amt" style="color:#ef4444">평가손익: -441원</div>
+    <div class="coin-pnl-amt" style="color:#ef4444">평가손익: -546원</div>
     <div class="coin-levels">
       <span class="lvl sl">손절 1,751</span>
       <span class="lvl t1">1차 2,237</span>
@@ -470,15 +472,15 @@ body {
   <div class="coin-header">
     <span class="coin-name">NEAR</span>
     <span style='font-size:10px;color:#22c55e;background:#052e16;padding:1px 5px;border-radius:3px'>LIVE</span>
-    <span class="coin-pnl" style="color:#ef4444">-3.02%</span>
+    <span class="coin-pnl" style="color:#ef4444">-3.53%</span>
   </div>
   <div class="coin-body">
     <div class="coin-row2">
       <span class="label2">수량</span><span>30개</span>
       <span class="label2">매수가</span><span>3,769원</span>
-      <span class="label2">현재가</span><span style="color:#ef4444">3,655원</span>
+      <span class="label2">현재가</span><span style="color:#ef4444">3,636원</span>
     </div>
-    <div class="coin-pnl-amt" style="color:#ef4444">평가손익: -3,420원</div>
+    <div class="coin-pnl-amt" style="color:#ef4444">평가손익: -3,990원</div>
     <div class="coin-levels">
       <span class="lvl sl">손절 3,392</span>
       <span class="lvl t1">1차 4,334</span>
@@ -494,7 +496,7 @@ body {
   </div>
   <div style="text-align:right">
     <div class="coin-total-label">평가손익</div>
-    <div class="coin-total-val" style="color:#ef4444">-10,528원 (-3.61%)</div>
+    <div class="coin-total-val" style="color:#ef4444">-11,274원 (-3.86%)</div>
   </div>
 </div>
 
@@ -780,7 +782,7 @@ body {
 <div id="perm-list"><div class='empty-msg'>불러오는 중...</div></div>
 
 <div class="update-bar">
-  🔄 마지막 업데이트: <b>2026-05-29 23:03</b><br>
+  🔄 마지막 업데이트: <b>2026-05-29 23:09</b><br>
   다음 업데이트: <span class="next-update">다음 영업일 08:59</span><br>
   <span style="color:#1e3a5f">hanastocknews.com</span>
 </div>
@@ -840,17 +842,26 @@ function pinDel() {
   if (pinBuf.length > 0) { pinBuf = pinBuf.slice(0, -1); updateDots(); }
 }
 
-// 키패드 이벤트 — touchstart + click 둘 다 등록 (모바일 호환)
-document.querySelectorAll('.pin-key[data-pin]').forEach(btn => {
-  function handlePress(e) {
-    e.preventDefault();
-    const v = btn.dataset.pin;
-    btn.classList.add('pressed');
-    setTimeout(() => btn.classList.remove('pressed'), 150);
-    if (v === 'del') pinDel(); else pinKey(v);
-  }
-  btn.addEventListener('touchstart', handlePress, { passive: false });
-  btn.addEventListener('click', handlePress);
+// 키패드 이벤트 — 이벤트 위임 + touchend/click 분리 (모바일 호환)
+let pinTouched = false;
+
+document.getElementById('pin-overlay').addEventListener('touchend', function(e) {
+  const btn = e.target.closest('[data-pin]');
+  if (!btn) return;
+  pinTouched = true;
+  setTimeout(() => { pinTouched = false; }, 400);
+  btn.classList.add('pressed');
+  setTimeout(() => btn.classList.remove('pressed'), 150);
+  const v = btn.dataset.pin;
+  if (v === 'del') pinDel(); else pinKey(v);
+}, { passive: true });
+
+document.getElementById('pin-overlay').addEventListener('click', function(e) {
+  if (pinTouched) return;
+  const btn = e.target.closest('[data-pin]');
+  if (!btn) return;
+  const v = btn.dataset.pin;
+  if (v === 'del') pinDel(); else pinKey(v);
 });
 
 // 세션 인증 유지 확인
@@ -860,7 +871,7 @@ if (sessionStorage.getItem('hana_auth') === '1') {
 
 const CHAT_ENABLED  = true;
 const CHAT_ENDPOINT = "https://easiness-doorstop-flyer.ngrok-free.dev/chat";
-const SYSTEM_PROMPT = "너는 '하나'야. 사용자의 주식/코인 투자를 돕는 AI 어시스턴트야. 친절하고 간결하게 한국어로 답해.\n\n## 현재 코인 포지션 (2026-05-29 23:03 기준)\nATOM: 35개, 매수 3164원, 현재 , -6.02%\nXRP: 35개, 매수 1946원, 현재 , -0.65%\nNEAR: 30개, 매수 3769원, 현재 , -3.02%\n\n## 코인 매매 원칙\n- 손절: 매수가 대비 -10%\n- 1차 익절: +15% (절반 매도)\n- 전량 익절: +25%\n- RSI > 72 이면 전량 매도\n\n## 오늘의 주식 추천 (score 70+)\nNHN: MODERATE, score 96, 매수가 50900원\n삼성SDI: WEAK, score 93, 매수가 688000원\nLG: WEAK, score 88, 매수가 146600원\n삼성SDS: WEAK, score 88, 매수가 299000원\n기업은행: WEAK, score 82, 매수가 20200원\n\n## 보유 주식 포트폴리오\nKODEX 200: 매수 92270원, 현재 134815원, +46.11%, 상태=매도검토\nLG에너지솔루션: 매수 432125원, 현재 457500원, +5.87%, 상태=매도검토\n기아: 매수 163575원, 현재 169500원, +3.62%, 상태=보유중\n두산에너빌리티: 매수 106014원, 현재 106800원, +0.74%, 상태=보유중\n강원랜드: 매수 15009원, 현재 15090원, +0.54%, 상태=보유중\nCJ ENM: 매수 40120원, 현재 39750원, -0.92%, 상태=손실보유\nS-Oil: 매수 108392원, 현재 106800원, -1.47%, 상태=손실보유\nKB금융: 매수 153075원, 현재 150600원, -1.62%, 상태=손실보유\n신한지주: 매수 95541원, 현재 93500원, -2.14%, 상태=손실보유\nKT: 매수 54650원, 현재 53000원, -3.02%, 상태=손실보유\n셀트리온: 매수 202988원, 현재 192800원, -5.02%, 상태=손실보유\n한화솔루션: 매수 43860원, 현재 41600원, -5.15%, 상태=손실보유\n유한양행: 매수 90071원, 현재 85100원, -5.52%, 상태=손실보유\n현대건설: 매수 159137원, 현재 146500원, -7.94%, 상태=손실보유\nHD건설기계: 매수 166535원, 현재 151100원, -9.27%, 상태=손실보유\nSK이노베이션: 매수 131836원, 현재 119300원, -9.51%, 상태=손실보유\n우리금융지주: 매수 33302원, 현재 29800원, -10.52%, 상태=손절검토\n포스코인터내셔널: 매수 72137원, 현재 64000원, -11.28%, 상태=손절검토\n기업은행: 매수 22837원, 현재 20100원, -11.98%, 상태=손절검토\n한화시스템: 매수 119832원, 현재 104700원, -12.63%, 상태=손절검토\n한국전력: 매수 44818원, 현재 38950원, -13.09%, 상태=손절검토\n알테오젠: 매수 431061원, 현재 368000원, -14.63%, 상태=손절검토\n에이비엘바이오: 매수 135745원, 현재 114500원, -15.65%, 상태=손절검토\nKODEX 인버스: 매수 1456원, 현재 1011원, -30.56%, 상태=손절검토\n\n## 주식 매매 원칙\n- Track A: +3% (5거래일) 또는 +7% (14거래일) 목표\n- Track B: +5% 또는 +10% 목표\n- 갭업 +15% 이상이면 매수 금지\n\n## 응답 규칙\n- 답변은 짧고 핵심만. 모바일에서 보기 좋게.\n- 숫자는 한국식(원, %) 단위 사용.\n- 투자 결정은 사용자 본인 판단이라고 상기시켜줘.";
+const SYSTEM_PROMPT = "너는 '하나'야. 사용자의 주식/코인 투자를 돕는 AI 어시스턴트야. 친절하고 간결하게 한국어로 답해.\n\n## 현재 코인 포지션 (2026-05-29 23:09 기준)\nATOM: 35개, 매수 3164원, 현재 , -6.08%\nXRP: 35개, 매수 1946원, 현재 , -0.80%\nNEAR: 30개, 매수 3769원, 현재 , -3.53%\n\n## 코인 매매 원칙\n- 손절: 매수가 대비 -10%\n- 1차 익절: +15% (절반 매도)\n- 전량 익절: +25%\n- RSI > 72 이면 전량 매도\n\n## 오늘의 주식 추천 (score 70+)\nNHN: MODERATE, score 96, 매수가 50900원\n삼성SDI: WEAK, score 93, 매수가 688000원\nLG: WEAK, score 88, 매수가 146600원\n삼성SDS: WEAK, score 88, 매수가 299000원\n기업은행: WEAK, score 82, 매수가 20200원\n\n## 보유 주식 포트폴리오\nKODEX 200: 매수 92270원, 현재 134815원, +46.11%, 상태=매도검토\nLG에너지솔루션: 매수 432125원, 현재 457500원, +5.87%, 상태=매도검토\n기아: 매수 163575원, 현재 169500원, +3.62%, 상태=보유중\n두산에너빌리티: 매수 106014원, 현재 106800원, +0.74%, 상태=보유중\n강원랜드: 매수 15009원, 현재 15090원, +0.54%, 상태=보유중\nCJ ENM: 매수 40120원, 현재 39750원, -0.92%, 상태=손실보유\nS-Oil: 매수 108392원, 현재 106800원, -1.47%, 상태=손실보유\nKB금융: 매수 153075원, 현재 150600원, -1.62%, 상태=손실보유\n신한지주: 매수 95541원, 현재 93500원, -2.14%, 상태=손실보유\nKT: 매수 54650원, 현재 53000원, -3.02%, 상태=손실보유\n셀트리온: 매수 202988원, 현재 192800원, -5.02%, 상태=손실보유\n한화솔루션: 매수 43860원, 현재 41600원, -5.15%, 상태=손실보유\n유한양행: 매수 90071원, 현재 85100원, -5.52%, 상태=손실보유\n현대건설: 매수 159137원, 현재 146500원, -7.94%, 상태=손실보유\nHD건설기계: 매수 166535원, 현재 151100원, -9.27%, 상태=손실보유\nSK이노베이션: 매수 131836원, 현재 119300원, -9.51%, 상태=손실보유\n우리금융지주: 매수 33302원, 현재 29800원, -10.52%, 상태=손절검토\n포스코인터내셔널: 매수 72137원, 현재 64000원, -11.28%, 상태=손절검토\n기업은행: 매수 22837원, 현재 20100원, -11.98%, 상태=손절검토\n한화시스템: 매수 119832원, 현재 104700원, -12.63%, 상태=손절검토\n한국전력: 매수 44818원, 현재 38950원, -13.09%, 상태=손절검토\n알테오젠: 매수 431061원, 현재 368000원, -14.63%, 상태=손절검토\n에이비엘바이오: 매수 135745원, 현재 114500원, -15.65%, 상태=손절검토\nKODEX 인버스: 매수 1456원, 현재 1011원, -30.56%, 상태=손절검토\n\n## 주식 매매 원칙\n- Track A: +3% (5거래일) 또는 +7% (14거래일) 목표\n- Track B: +5% 또는 +10% 목표\n- 갭업 +15% 이상이면 매수 금지\n\n## 응답 규칙\n- 답변은 짧고 핵심만. 모바일에서 보기 좋게.\n- 숫자는 한국식(원, %) 단위 사용.\n- 투자 결정은 사용자 본인 판단이라고 상기시켜줘.";
 
 let history = [];
 
