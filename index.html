@@ -104,11 +104,53 @@ body {
 }
 /* 빈 메시지 */
 .empty-msg { color: #475569; font-size: 13px; text-align: center; padding: 20px 0; }
+/* 경제 뉴스 */
+.news-item {
+  display: block; text-decoration: none;
+  background: #1e293b; border-radius: 10px;
+  padding: 10px 14px; margin-bottom: 6px;
+  border: 1px solid #334155;
+  transition: background 0.15s;
+}
+.news-item:active { background: #273549; }
+.news-title { font-size: 13px; color: #e2e8f0; line-height: 1.5; margin-bottom: 4px; }
+.news-meta  { display: flex; justify-content: space-between; }
+.news-src   { font-size: 10px; color: #3b82f6; }
+.news-time  { font-size: 10px; color: #475569; }
+/* 거래 분석 카드 */
+.trade-card {
+  background: #1e293b; border-radius: 10px;
+  padding: 12px 14px; margin-bottom: 8px;
+  border: 1px solid #334155;
+}
+.trade-top {
+  display: flex; align-items: center; gap: 8px; margin-bottom: 6px;
+}
+.trade-name   { font-size: 15px; font-weight: 700; }
+.trade-pnl    { margin-left: auto; font-size: 15px; font-weight: 700; }
+.trade-status {
+  font-size: 10px; font-weight: 600;
+  padding: 2px 6px; border-radius: 4px;
+}
+.trade-detail { font-size: 12px; color: #94a3b8; line-height: 1.9; }
+.trade-memo   { font-size: 11px; color: #475569; margin-top: 5px; border-top: 1px solid #1e293b; padding-top: 5px; }
 /* 채팅 */
 #chat-wrap {
   background: #1e293b; border-radius: 12px;
   border: 1px solid #334155; overflow: hidden; margin-bottom: 16px;
 }
+.chat-header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 8px 12px; border-bottom: 1px solid #334155;
+  background: #162032;
+}
+.chat-header-title { font-size: 12px; color: #64748b; font-weight: 600; }
+#chat-save {
+  background: transparent; border: 1px solid #334155; color: #64748b;
+  padding: 3px 10px; border-radius: 5px; font-size: 11px; cursor: pointer;
+  font-family: inherit;
+}
+#chat-save:hover { border-color: #3b82f6; color: #93c5fd; }
 #chat-box {
   height: 260px; overflow-y: auto; padding: 12px;
   display: flex; flex-direction: column; gap: 8px;
@@ -152,83 +194,28 @@ body {
 
 <div class="page-header">
   <div class="page-title">📊 하나 대시보드</div>
-  <div class="page-sub">2026-05-29 21:30 기준 · 자동갱신 08:59 / 12:00 / 15:30</div>
+  <div class="page-sub">2026-05-29 22:34 기준 · 자동갱신 08:59 / 12:00 / 15:30</div>
 </div>
 
 
 
-<div class="section-title">코인 포지션</div>
+<!-- ① 채팅 -->
+<div class="section-title">하나와 대화</div>
 
-<div class="coin-card">
-  <div class="coin-header">
-    <span class="coin-name">ATOM</span>
-    <span style='font-size:10px;color:#22c55e;background:#052e16;padding:1px 5px;border-radius:3px'>LIVE</span>
-    <span class="coin-pnl" style="color:#ef4444">-6.02%</span>
+<div id="chat-wrap">
+  <div class="chat-header">
+    <span class="chat-header-title">💬 AI 어시스턴트 하나</span>
+    <button id="chat-save">💾 대화 저장</button>
   </div>
-  <div class="coin-body">
-    <div class="coin-row2">
-      <span class="label2">수량</span><span>35개</span>
-      <span class="label2">매수가</span><span>3,164원</span>
-      <span class="label2">현재가</span><span style="color:#ef4444">2,974원</span>
-    </div>
-    <div class="coin-pnl-amt" style="color:#ef4444">평가손익: -6,668원</div>
-    <div class="coin-levels">
-      <span class="lvl sl">손절 2,848</span>
-      <span class="lvl t1">1차 3,639</span>
-      <span class="lvl t2">전량 3,956</span>
-    </div>
-  </div>
-</div><div class="coin-card">
-  <div class="coin-header">
-    <span class="coin-name">XRP</span>
-    <span style='font-size:10px;color:#22c55e;background:#052e16;padding:1px 5px;border-radius:3px'>LIVE</span>
-    <span class="coin-pnl" style="color:#ef4444">-0.49%</span>
-  </div>
-  <div class="coin-body">
-    <div class="coin-row2">
-      <span class="label2">수량</span><span>35개</span>
-      <span class="label2">매수가</span><span>1,946원</span>
-      <span class="label2">현재가</span><span style="color:#ef4444">1,936원</span>
-    </div>
-    <div class="coin-pnl-amt" style="color:#ef4444">평가손익: -336원</div>
-    <div class="coin-levels">
-      <span class="lvl sl">손절 1,751</span>
-      <span class="lvl t1">1차 2,237</span>
-      <span class="lvl t2">전량 2,432</span>
-    </div>
-  </div>
-</div><div class="coin-card">
-  <div class="coin-header">
-    <span class="coin-name">NEAR</span>
-    <span style='font-size:10px;color:#22c55e;background:#052e16;padding:1px 5px;border-radius:3px'>LIVE</span>
-    <span class="coin-pnl" style="color:#ef4444">-4.17%</span>
-  </div>
-  <div class="coin-body">
-    <div class="coin-row2">
-      <span class="label2">수량</span><span>30개</span>
-      <span class="label2">매수가</span><span>3,769원</span>
-      <span class="label2">현재가</span><span style="color:#ef4444">3,612원</span>
-    </div>
-    <div class="coin-pnl-amt" style="color:#ef4444">평가손익: -4,710원</div>
-    <div class="coin-levels">
-      <span class="lvl sl">손절 3,392</span>
-      <span class="lvl t1">1차 4,334</span>
-      <span class="lvl t2">전량 4,711</span>
-    </div>
+<!-- chat UI -->
+  <div id="chat-box"></div>
+  <div id="chat-input-row">
+    <input id="chat-input" type="text" placeholder="하나에게 물어봐..." autocomplete="off">
+    <button id="chat-send">전송</button>
   </div>
 </div>
 
-<div class="coin-total">
-  <div>
-    <div class="coin-total-label">총 투자금</div>
-    <div style="font-size:13px;color:#94a3b8">291,924원</div>
-  </div>
-  <div style="text-align:right">
-    <div class="coin-total-label">평가손익</div>
-    <div class="coin-total-val" style="color:#ef4444">-11,714원 (-4.01%)</div>
-  </div>
-</div>
-
+<!-- ② 오늘의 주식 추천 -->
 <div class="section-title">오늘의 주식 추천 ()</div>
 
 <div class="buy-date-badge">📅 매수일: 2026-06-01</div>
@@ -323,19 +310,373 @@ body {
   </div>
 </div>
 
-<div class="section-title">하나와 대화</div>
+<!-- ③ 경제 주요 뉴스 -->
+<div class="section-title">경제 주요 뉴스</div>
 
-<div id="chat-wrap">
-<!-- chat UI -->
-  <div id="chat-box"></div>
-  <div id="chat-input-row">
-    <input id="chat-input" type="text" placeholder="하나에게 물어봐..." autocomplete="off">
-    <button id="chat-send">전송</button>
+<a class="news-item" href="https://news.google.com/rss/articles/CBMiW0FVX3lxTE9JcmZDbVVJdTl6Z2w4bmltRUdRYkJZQzRoWGVudmV5M2lYQkZ1NVQ0QzZlSGhXM0lmRlB6TWIwN2hpekpnSk51eC1FaWZOUm1hZjRXTmhubGhHZjTSAWBBVV95cUxPOEJLQzcwSndYbDdVUFdyOUNxbVRMUG5ySG5GaS03VmNTMzZlU0RrSXpEVUpudHo1Uml3UmFNRmVpSUIxSHNQRlFWQWpFRFp4dnh1aVdabGJ3dk12SFVfUFo?oc=5" target="_blank" rel="noopener">
+  <div class="news-title">'HBM4E 샘플 첫출하' 삼전, 우선주 포함 시총 2천조원 돌파</div>
+  <div class="news-meta"><span class="news-src">연합뉴스</span><span class="news-time">05-29 15:02</span></div>
+</a><a class="news-item" href="https://news.google.com/rss/articles/CBMiakFVX3lxTE9TZ1N3aC01MTB6TmFFV284bmJCN2g1UzhVRV9CT0t3TjNtN0JfR2FHM2t4VW5kZUFqRlVEY3ZEaTg4LUJjZXVaVm45WDVob1dBVlZueUNWdlFtcFg2cHZvWGxrSkQwVTZwdmc?oc=5" target="_blank" rel="noopener">
+  <div class="news-title">앤트로픽, 구글 TPU 확보 위해 54조 초대형 대출 추진..."사상 최대 규모"</div>
+  <div class="news-meta"><span class="news-src">AI타임스</span><span class="news-time">05-29 14:03</span></div>
+</a><a class="news-item" href="https://news.google.com/rss/articles/CBMidEFVX3lxTE9ndUphTklmVXJhV0hHbEJwSjlGUHlBeUdGMkpqalExdXl0M1JZX1ZyWXhVVWlCVWkzaE1nMTgxMTJ2SEVhM3BUbEFYOVdlaUxLYlZKcndDc2VRWnlhYkVDSDR5SElZM2Fia09TWEVaNmVBallW0gF0QVVfeXFMUFVoNmFmR2FSRUVwQ3U3ZGRqLWh0Vl9jZ05ZNmNMUnQ2ekV5SFFaQ3M3WHYycVNGVThmV0ttRkUyMlZtejJxQnpEUWxPUFl1UkdJdUFWWjRfMzNJeVY5RkpEeGV6Tl9DREppRnhzeUthLTlDRUU?oc=5" target="_blank" rel="noopener">
+  <div class="news-title">금융위 "국민참여형 국민성장펀드 완판‥10명 중 4명 서민"</div>
+  <div class="news-meta"><span class="news-src">MBC 뉴스</span><span class="news-time">05-29 19:20</span></div>
+</a><a class="news-item" href="https://news.google.com/rss/articles/CBMicEFVX3lxTE9Ybmw0Vy11eHNOLW8wSkFPVHFBdVBIVEZ2NGtHSnp6VEoyaW0xT1pYMDV5VjV4VUxaOVVDblRBcjZBN0F3T05ERkE0Yk02Tkt1RkFEWlU5RVhvUExFRml0ZkNxTW9LV3o4dTlMNFUtdHA?oc=5" target="_blank" rel="noopener">
+  <div class="news-title">국민연금, 국내주식 허용범위 두 배 확대…28.8%까지 담는다</div>
+  <div class="news-meta"><span class="news-src">연합인포맥스</span><span class="news-time">05-29 07:44</span></div>
+</a><a class="news-item" href="https://news.google.com/rss/articles/CBMickFVX3lxTE52WWdDV19BVDd6X1VEdHNkaVpkY2tKRENwRmFnbDQtQU1TUV9BbXpmRFRxdkM5UlNpM2RMMjEyWjRiOWFjYms0VnB5bnlidS01ZTY0ekhaWkxYTEZVNC1OaEYxRkdEemNFa19UQ3pBRkNQZw?oc=5" target="_blank" rel="noopener">
+  <div class="news-title">증권사, 코인거래소 품는다…디지털자산 선점 경쟁 본격화</div>
+  <div class="news-meta"><span class="news-src">인더스트리뉴스</span><span class="news-time">05-29 18:27</span></div>
+</a><a class="news-item" href="https://news.google.com/rss/articles/CBMiW0FVX3lxTE5IRjJUem5qdS1SbmVidUxacVFJM1VtVkJBYnl3QTF1RzZkdnVhLVFyQ01xTWJIOXJ2SXREdG95T1ppUHpENUgzc0hhTHFGdndGUml4ZkhlYTBpZW_SAWBBVV95cUxQdXBSMHlNcTZtMXFlTF93UmFSN2gyLXRaOHRuZ2dkWnJOYjl2LTJTdW9WbDRKX19sNGNidkZvbGNtQUkwdHpGeUNXV2hTMjJ1Q0Y1elFjV2J0TGRpREF1aEg?oc=5" target="_blank" rel="noopener">
+  <div class="news-title">3기신도시 남양주왕숙2 첫 공급 2개 단지 세자릿수 경쟁률</div>
+  <div class="news-meta"><span class="news-src">연합뉴스</span><span class="news-time">05-29 20:13</span></div>
+</a>
+
+<!-- ④ 코인 포지션 -->
+<div class="section-title">코인 포지션</div>
+
+<div class="coin-card">
+  <div class="coin-header">
+    <span class="coin-name">ATOM</span>
+    <span style='font-size:10px;color:#22c55e;background:#052e16;padding:1px 5px;border-radius:3px'>LIVE</span>
+    <span class="coin-pnl" style="color:#ef4444">-6.68%</span>
+  </div>
+  <div class="coin-body">
+    <div class="coin-row2">
+      <span class="label2">수량</span><span>35개</span>
+      <span class="label2">매수가</span><span>3,164원</span>
+      <span class="label2">현재가</span><span style="color:#ef4444">2,953원</span>
+    </div>
+    <div class="coin-pnl-amt" style="color:#ef4444">평가손익: -7,402원</div>
+    <div class="coin-levels">
+      <span class="lvl sl">손절 2,848</span>
+      <span class="lvl t1">1차 3,639</span>
+      <span class="lvl t2">전량 3,956</span>
+    </div>
+  </div>
+</div><div class="coin-card">
+  <div class="coin-header">
+    <span class="coin-name">XRP</span>
+    <span style='font-size:10px;color:#22c55e;background:#052e16;padding:1px 5px;border-radius:3px'>LIVE</span>
+    <span class="coin-pnl" style="color:#ef4444">-1.06%</span>
+  </div>
+  <div class="coin-body">
+    <div class="coin-row2">
+      <span class="label2">수량</span><span>35개</span>
+      <span class="label2">매수가</span><span>1,946원</span>
+      <span class="label2">현재가</span><span style="color:#ef4444">1,925원</span>
+    </div>
+    <div class="coin-pnl-amt" style="color:#ef4444">평가손익: -721원</div>
+    <div class="coin-levels">
+      <span class="lvl sl">손절 1,751</span>
+      <span class="lvl t1">1차 2,237</span>
+      <span class="lvl t2">전량 2,432</span>
+    </div>
+  </div>
+</div><div class="coin-card">
+  <div class="coin-header">
+    <span class="coin-name">NEAR</span>
+    <span style='font-size:10px;color:#22c55e;background:#052e16;padding:1px 5px;border-radius:3px'>LIVE</span>
+    <span class="coin-pnl" style="color:#ef4444">-5.28%</span>
+  </div>
+  <div class="coin-body">
+    <div class="coin-row2">
+      <span class="label2">수량</span><span>30개</span>
+      <span class="label2">매수가</span><span>3,769원</span>
+      <span class="label2">현재가</span><span style="color:#ef4444">3,570원</span>
+    </div>
+    <div class="coin-pnl-amt" style="color:#ef4444">평가손익: -5,970원</div>
+    <div class="coin-levels">
+      <span class="lvl sl">손절 3,392</span>
+      <span class="lvl t1">1차 4,334</span>
+      <span class="lvl t2">전량 4,711</span>
+    </div>
   </div>
 </div>
 
+<div class="coin-total">
+  <div>
+    <div class="coin-total-label">총 투자금</div>
+    <div style="font-size:13px;color:#94a3b8">291,924원</div>
+  </div>
+  <div style="text-align:right">
+    <div class="coin-total-label">평가손익</div>
+    <div class="coin-total-val" style="color:#ef4444">-14,094원 (-4.83%)</div>
+  </div>
+</div>
+
+<!-- ⑤ 거래 분석 -->
+<div class="section-title">거래 분석 ()</div>
+
+<div class="trade-card">
+  <div class="trade-top">
+    <span class="trade-name">KODEX 200</span>
+    <span class='trade-status' style='background:#1c0a00;color:#64748b'>매도검토</span>
+    <span class="trade-pnl" style="color:#22c55e">+46.11%</span>
+  </div>
+  <div class="trade-detail">
+    <div><span class="label2">매수가</span> 92270원　<span class="label2">현재가</span> 134815원　<span class="label2">수량</span> 14주</div>
+    <div><span class="label2">목표가</span> 95961원　<span class="label2">매수일</span> 2026-05-26</div>
+  </div>
+  <div class='trade-memo'>잔고동기화</div>
+</div><div class="trade-card">
+  <div class="trade-top">
+    <span class="trade-name">LG에너지솔루션</span>
+    <span class='trade-status' style='background:#1c0a00;color:#64748b'>매도검토</span>
+    <span class="trade-pnl" style="color:#22c55e">+5.87%</span>
+  </div>
+  <div class="trade-detail">
+    <div><span class="label2">매수가</span> 432125원　<span class="label2">현재가</span> 457500원　<span class="label2">수량</span> 1주</div>
+    <div><span class="label2">목표가</span> 449410원　<span class="label2">매수일</span> 2026-05-26</div>
+  </div>
+  <div class='trade-memo'>잔고동기화</div>
+</div><div class="trade-card">
+  <div class="trade-top">
+    <span class="trade-name">기아</span>
+    <span class='trade-status' style='background:#172554;color:#3b82f6'>보유중</span>
+    <span class="trade-pnl" style="color:#22c55e">+3.62%</span>
+  </div>
+  <div class="trade-detail">
+    <div><span class="label2">매수가</span> 163575원　<span class="label2">현재가</span> 169500원　<span class="label2">수량</span> 2주</div>
+    <div><span class="label2">목표가</span> 170118원　<span class="label2">매수일</span> 2026-05-26</div>
+  </div>
+  <div class='trade-memo'>잔고동기화</div>
+</div><div class="trade-card">
+  <div class="trade-top">
+    <span class="trade-name">두산에너빌리티</span>
+    <span class='trade-status' style='background:#172554;color:#3b82f6'>보유중</span>
+    <span class="trade-pnl" style="color:#22c55e">+0.74%</span>
+  </div>
+  <div class="trade-detail">
+    <div><span class="label2">매수가</span> 106014원　<span class="label2">현재가</span> 106800원　<span class="label2">수량</span> 7주</div>
+    <div><span class="label2">목표가</span> 110255원　<span class="label2">매수일</span> 2026-05-27</div>
+  </div>
+  <div class='trade-memo'>잔고동기화</div>
+</div><div class="trade-card">
+  <div class="trade-top">
+    <span class="trade-name">강원랜드</span>
+    <span class='trade-status' style='background:#172554;color:#3b82f6'>보유중</span>
+    <span class="trade-pnl" style="color:#22c55e">+0.54%</span>
+  </div>
+  <div class="trade-detail">
+    <div><span class="label2">매수가</span> 15009원　<span class="label2">현재가</span> 15090원　<span class="label2">수량</span> 10주</div>
+    <div><span class="label2">목표가</span> 15609원　<span class="label2">매수일</span> 2026-05-29</div>
+  </div>
+  <div class='trade-memo'>잔고동기화</div>
+</div><div class="trade-card">
+  <div class="trade-top">
+    <span class="trade-name">CJ ENM</span>
+    <span class='trade-status' style='background:#172554;color:#3b82f6'>손실보유</span>
+    <span class="trade-pnl" style="color:#ef4444">-0.92%</span>
+  </div>
+  <div class="trade-detail">
+    <div><span class="label2">매수가</span> 40120원　<span class="label2">현재가</span> 39750원　<span class="label2">수량</span> 5주</div>
+    <div><span class="label2">목표가</span> 41725원　<span class="label2">매수일</span> 2026-05-26</div>
+  </div>
+  <div class='trade-memo'>잔고동기화</div>
+</div><div class="trade-card">
+  <div class="trade-top">
+    <span class="trade-name">S-Oil</span>
+    <span class='trade-status' style='background:#172554;color:#3b82f6'>손실보유</span>
+    <span class="trade-pnl" style="color:#ef4444">-1.47%</span>
+  </div>
+  <div class="trade-detail">
+    <div><span class="label2">매수가</span> 108392원　<span class="label2">현재가</span> 106800원　<span class="label2">수량</span> 13주</div>
+    <div><span class="label2">목표가</span> 112728원　<span class="label2">매수일</span> 2026-05-26</div>
+  </div>
+  <div class='trade-memo'>잔고동기화</div>
+</div><div class="trade-card">
+  <div class="trade-top">
+    <span class="trade-name">KB금융</span>
+    <span class='trade-status' style='background:#172554;color:#3b82f6'>손실보유</span>
+    <span class="trade-pnl" style="color:#ef4444">-1.62%</span>
+  </div>
+  <div class="trade-detail">
+    <div><span class="label2">매수가</span> 153075원　<span class="label2">현재가</span> 150600원　<span class="label2">수량</span> 5주</div>
+    <div><span class="label2">목표가</span> 159198원　<span class="label2">매수일</span> 2026-05-26</div>
+  </div>
+  <div class='trade-memo'>잔고동기화</div>
+</div><div class="trade-card">
+  <div class="trade-top">
+    <span class="trade-name">신한지주</span>
+    <span class='trade-status' style='background:#172554;color:#3b82f6'>손실보유</span>
+    <span class="trade-pnl" style="color:#ef4444">-2.14%</span>
+  </div>
+  <div class="trade-detail">
+    <div><span class="label2">매수가</span> 95541원　<span class="label2">현재가</span> 93500원　<span class="label2">수량</span> 13주</div>
+    <div><span class="label2">목표가</span> 99363원　<span class="label2">매수일</span> 2026-05-26</div>
+  </div>
+  <div class='trade-memo'>잔고동기화</div>
+</div><div class="trade-card">
+  <div class="trade-top">
+    <span class="trade-name">KT</span>
+    <span class='trade-status' style='background:#172554;color:#3b82f6'>손실보유</span>
+    <span class="trade-pnl" style="color:#ef4444">-3.02%</span>
+  </div>
+  <div class="trade-detail">
+    <div><span class="label2">매수가</span> 54650원　<span class="label2">현재가</span> 53000원　<span class="label2">수량</span> 6주</div>
+    <div><span class="label2">목표가</span> 56836원　<span class="label2">매수일</span> 2026-05-26</div>
+  </div>
+  <div class='trade-memo'>잔고동기화</div>
+</div><div class="trade-card">
+  <div class="trade-top">
+    <span class="trade-name">셀트리온</span>
+    <span class='trade-status' style='background:#172554;color:#3b82f6'>손실보유</span>
+    <span class="trade-pnl" style="color:#ef4444">-5.02%</span>
+  </div>
+  <div class="trade-detail">
+    <div><span class="label2">매수가</span> 202988원　<span class="label2">현재가</span> 192800원　<span class="label2">수량</span> 14주</div>
+    <div><span class="label2">목표가</span> 211108원　<span class="label2">매수일</span> 2026-05-26</div>
+  </div>
+  <div class='trade-memo'>잔고동기화</div>
+</div><div class="trade-card">
+  <div class="trade-top">
+    <span class="trade-name">한화솔루션</span>
+    <span class='trade-status' style='background:#172554;color:#3b82f6'>손실보유</span>
+    <span class="trade-pnl" style="color:#ef4444">-5.15%</span>
+  </div>
+  <div class="trade-detail">
+    <div><span class="label2">매수가</span> 43860원　<span class="label2">현재가</span> 41600원　<span class="label2">수량</span> 21주</div>
+    <div><span class="label2">목표가</span> 45614원　<span class="label2">매수일</span> 2026-05-26</div>
+  </div>
+  <div class='trade-memo'>잔고동기화</div>
+</div><div class="trade-card">
+  <div class="trade-top">
+    <span class="trade-name">유한양행</span>
+    <span class='trade-status' style='background:#172554;color:#3b82f6'>손실보유</span>
+    <span class="trade-pnl" style="color:#ef4444">-5.52%</span>
+  </div>
+  <div class="trade-detail">
+    <div><span class="label2">매수가</span> 90071원　<span class="label2">현재가</span> 85100원　<span class="label2">수량</span> 13주</div>
+    <div><span class="label2">목표가</span> 93674원　<span class="label2">매수일</span> 2026-05-26</div>
+  </div>
+  <div class='trade-memo'>잔고동기화</div>
+</div><div class="trade-card">
+  <div class="trade-top">
+    <span class="trade-name">현대건설</span>
+    <span class='trade-status' style='background:#172554;color:#3b82f6'>손실보유</span>
+    <span class="trade-pnl" style="color:#ef4444">-7.94%</span>
+  </div>
+  <div class="trade-detail">
+    <div><span class="label2">매수가</span> 159137원　<span class="label2">현재가</span> 146500원　<span class="label2">수량</span> 12주</div>
+    <div><span class="label2">목표가</span> 165502원　<span class="label2">매수일</span> 2026-05-26</div>
+  </div>
+  <div class='trade-memo'>잔고동기화</div>
+</div><div class="trade-card">
+  <div class="trade-top">
+    <span class="trade-name">HD건설기계</span>
+    <span class='trade-status' style='background:#172554;color:#3b82f6'>손실보유</span>
+    <span class="trade-pnl" style="color:#ef4444">-9.27%</span>
+  </div>
+  <div class="trade-detail">
+    <div><span class="label2">매수가</span> 166535원　<span class="label2">현재가</span> 151100원　<span class="label2">수량</span> 14주</div>
+    <div><span class="label2">목표가</span> 173196원　<span class="label2">매수일</span> 2026-05-26</div>
+  </div>
+  <div class='trade-memo'>잔고동기화</div>
+</div><div class="trade-card">
+  <div class="trade-top">
+    <span class="trade-name">SK이노베이션</span>
+    <span class='trade-status' style='background:#172554;color:#3b82f6'>손실보유</span>
+    <span class="trade-pnl" style="color:#ef4444">-9.51%</span>
+  </div>
+  <div class="trade-detail">
+    <div><span class="label2">매수가</span> 131836원　<span class="label2">현재가</span> 119300원　<span class="label2">수량</span> 14주</div>
+    <div><span class="label2">목표가</span> 137109원　<span class="label2">매수일</span> 2026-05-26</div>
+  </div>
+  <div class='trade-memo'>잔고동기화</div>
+</div><div class="trade-card">
+  <div class="trade-top">
+    <span class="trade-name">우리금융지주</span>
+    <span class='trade-status' style='background:#1c0a00;color:#ef4444'>손절검토</span>
+    <span class="trade-pnl" style="color:#ef4444">-10.52%</span>
+  </div>
+  <div class="trade-detail">
+    <div><span class="label2">매수가</span> 33302원　<span class="label2">현재가</span> 29800원　<span class="label2">수량</span> 31주</div>
+    <div><span class="label2">목표가</span> 34634원　<span class="label2">매수일</span> 2026-05-26</div>
+  </div>
+  <div class='trade-memo'>잔고동기화</div>
+</div><div class="trade-card">
+  <div class="trade-top">
+    <span class="trade-name">포스코인터내셔널</span>
+    <span class='trade-status' style='background:#1c0a00;color:#ef4444'>손절검토</span>
+    <span class="trade-pnl" style="color:#ef4444">-11.28%</span>
+  </div>
+  <div class="trade-detail">
+    <div><span class="label2">매수가</span> 72137원　<span class="label2">현재가</span> 64000원　<span class="label2">수량</span> 23주</div>
+    <div><span class="label2">목표가</span> 75022원　<span class="label2">매수일</span> 2026-05-26</div>
+  </div>
+  <div class='trade-memo'>잔고동기화</div>
+</div><div class="trade-card">
+  <div class="trade-top">
+    <span class="trade-name">기업은행</span>
+    <span class='trade-status' style='background:#1c0a00;color:#ef4444'>손절검토</span>
+    <span class="trade-pnl" style="color:#ef4444">-11.98%</span>
+  </div>
+  <div class="trade-detail">
+    <div><span class="label2">매수가</span> 22837원　<span class="label2">현재가</span> 20100원　<span class="label2">수량</span> 50주</div>
+    <div><span class="label2">목표가</span> 23750원　<span class="label2">매수일</span> 2026-05-26</div>
+  </div>
+  <div class='trade-memo'>잔고동기화</div>
+</div><div class="trade-card">
+  <div class="trade-top">
+    <span class="trade-name">한화시스템</span>
+    <span class='trade-status' style='background:#1c0a00;color:#ef4444'>손절검토</span>
+    <span class="trade-pnl" style="color:#ef4444">-12.63%</span>
+  </div>
+  <div class="trade-detail">
+    <div><span class="label2">매수가</span> 119832원　<span class="label2">현재가</span> 104700원　<span class="label2">수량</span> 21주</div>
+    <div><span class="label2">목표가</span> 124625원　<span class="label2">매수일</span> 2026-05-26</div>
+  </div>
+  <div class='trade-memo'>잔고동기화</div>
+</div><div class="trade-card">
+  <div class="trade-top">
+    <span class="trade-name">한국전력</span>
+    <span class='trade-status' style='background:#1c0a00;color:#ef4444'>손절검토</span>
+    <span class="trade-pnl" style="color:#ef4444">-13.09%</span>
+  </div>
+  <div class="trade-detail">
+    <div><span class="label2">매수가</span> 44818원　<span class="label2">현재가</span> 38950원　<span class="label2">수량</span> 40주</div>
+    <div><span class="label2">목표가</span> 46611원　<span class="label2">매수일</span> 2026-05-26</div>
+  </div>
+  <div class='trade-memo'>잔고동기화</div>
+</div><div class="trade-card">
+  <div class="trade-top">
+    <span class="trade-name">알테오젠</span>
+    <span class='trade-status' style='background:#1c0a00;color:#ef4444'>손절검토</span>
+    <span class="trade-pnl" style="color:#ef4444">-14.63%</span>
+  </div>
+  <div class="trade-detail">
+    <div><span class="label2">매수가</span> 431061원　<span class="label2">현재가</span> 368000원　<span class="label2">수량</span> 6주</div>
+    <div><span class="label2">목표가</span> 448303원　<span class="label2">매수일</span> 2026-05-26</div>
+  </div>
+  <div class='trade-memo'>잔고동기화</div>
+</div><div class="trade-card">
+  <div class="trade-top">
+    <span class="trade-name">에이비엘바이오</span>
+    <span class='trade-status' style='background:#1c0a00;color:#ef4444'>손절검토</span>
+    <span class="trade-pnl" style="color:#ef4444">-15.65%</span>
+  </div>
+  <div class="trade-detail">
+    <div><span class="label2">매수가</span> 135745원　<span class="label2">현재가</span> 114500원　<span class="label2">수량</span> 38주</div>
+    <div><span class="label2">목표가</span> 141175원　<span class="label2">매수일</span> 2026-05-26</div>
+  </div>
+  <div class='trade-memo'>잔고동기화(합산)</div>
+</div><div class="trade-card">
+  <div class="trade-top">
+    <span class="trade-name">KODEX 인버스</span>
+    <span class='trade-status' style='background:#1c0a00;color:#ef4444'>손절검토</span>
+    <span class="trade-pnl" style="color:#ef4444">-30.56%</span>
+  </div>
+  <div class="trade-detail">
+    <div><span class="label2">매수가</span> 1456원　<span class="label2">현재가</span> 1011원　<span class="label2">수량</span> 660주</div>
+    <div><span class="label2">목표가</span> 1514원　<span class="label2">매수일</span> 2026-05-26</div>
+  </div>
+  <div class='trade-memo'>잔고동기화(합산)</div>
+</div>
+
 <div class="update-bar">
-  🔄 마지막 업데이트: <b>2026-05-29 21:30</b><br>
+  🔄 마지막 업데이트: <b>2026-05-29 22:34</b><br>
   다음 업데이트: <span class="next-update">다음 영업일 08:59</span><br>
   <span style="color:#1e3a5f">hanastocknews.com</span>
 </div>
@@ -343,7 +684,7 @@ body {
 <script>
 const CHAT_ENABLED  = true;
 const CHAT_ENDPOINT = "https://easiness-doorstop-flyer.ngrok-free.dev/chat";
-const SYSTEM_PROMPT = "너는 '하나'야. 사용자의 주식/코인 투자를 돕는 AI 어시스턴트야. 친절하고 간결하게 한국어로 답해.\n\n## 현재 코인 포지션 (2026-05-29 21:30 기준)\nATOM: 35개, 매수 3164원, 현재 , 수익률 -6.02%\nXRP: 35개, 매수 1946원, 현재 , 수익률 -0.49%\nNEAR: 30개, 매수 3769원, 현재 , 수익률 -4.17%\n\n## 코인 매매 원칙\n- 손절: 매수가 대비 -10%\n- 1차 익절: +15% (절반 매도)\n- 전량 익절: +25%\n- RSI > 72 이면 전량 매도\n\n## 오늘의 주식 추천 (score 70+)\nNHN: MODERATE, score 96, 매수가 50900원\n삼성SDI: WEAK, score 93, 매수가 688000원\nLG: WEAK, score 88, 매수가 146600원\n삼성SDS: WEAK, score 88, 매수가 299000원\n기업은행: WEAK, score 82, 매수가 20200원\n\n## 주식 매매 원칙\n- Track A: +3% (5거래일) 또는 +7% (14거래일) 목표\n- Track B: +5% 또는 +10% 목표\n- 갭업 +15% 이상이면 매수 금지\n\n## 응답 규칙\n- 답변은 짧고 핵심만. 모바일에서 보기 좋게.\n- 숫자는 한국식(원, %) 단위 사용.\n- 투자 결정은 사용자 본인 판단이라고 상기시켜줘.";
+const SYSTEM_PROMPT = "너는 '하나'야. 사용자의 주식/코인 투자를 돕는 AI 어시스턴트야. 친절하고 간결하게 한국어로 답해.\n\n## 현재 코인 포지션 (2026-05-29 22:34 기준)\nATOM: 35개, 매수 3164원, 현재 , -6.68%\nXRP: 35개, 매수 1946원, 현재 , -1.06%\nNEAR: 30개, 매수 3769원, 현재 , -5.28%\n\n## 코인 매매 원칙\n- 손절: 매수가 대비 -10%\n- 1차 익절: +15% (절반 매도)\n- 전량 익절: +25%\n- RSI > 72 이면 전량 매도\n\n## 오늘의 주식 추천 (score 70+)\nNHN: MODERATE, score 96, 매수가 50900원\n삼성SDI: WEAK, score 93, 매수가 688000원\nLG: WEAK, score 88, 매수가 146600원\n삼성SDS: WEAK, score 88, 매수가 299000원\n기업은행: WEAK, score 82, 매수가 20200원\n\n## 보유 주식 포트폴리오\nKODEX 200: 매수 92270원, 현재 134815원, +46.11%, 상태=매도검토\nLG에너지솔루션: 매수 432125원, 현재 457500원, +5.87%, 상태=매도검토\n기아: 매수 163575원, 현재 169500원, +3.62%, 상태=보유중\n두산에너빌리티: 매수 106014원, 현재 106800원, +0.74%, 상태=보유중\n강원랜드: 매수 15009원, 현재 15090원, +0.54%, 상태=보유중\nCJ ENM: 매수 40120원, 현재 39750원, -0.92%, 상태=손실보유\nS-Oil: 매수 108392원, 현재 106800원, -1.47%, 상태=손실보유\nKB금융: 매수 153075원, 현재 150600원, -1.62%, 상태=손실보유\n신한지주: 매수 95541원, 현재 93500원, -2.14%, 상태=손실보유\nKT: 매수 54650원, 현재 53000원, -3.02%, 상태=손실보유\n셀트리온: 매수 202988원, 현재 192800원, -5.02%, 상태=손실보유\n한화솔루션: 매수 43860원, 현재 41600원, -5.15%, 상태=손실보유\n유한양행: 매수 90071원, 현재 85100원, -5.52%, 상태=손실보유\n현대건설: 매수 159137원, 현재 146500원, -7.94%, 상태=손실보유\nHD건설기계: 매수 166535원, 현재 151100원, -9.27%, 상태=손실보유\nSK이노베이션: 매수 131836원, 현재 119300원, -9.51%, 상태=손실보유\n우리금융지주: 매수 33302원, 현재 29800원, -10.52%, 상태=손절검토\n포스코인터내셔널: 매수 72137원, 현재 64000원, -11.28%, 상태=손절검토\n기업은행: 매수 22837원, 현재 20100원, -11.98%, 상태=손절검토\n한화시스템: 매수 119832원, 현재 104700원, -12.63%, 상태=손절검토\n한국전력: 매수 44818원, 현재 38950원, -13.09%, 상태=손절검토\n알테오젠: 매수 431061원, 현재 368000원, -14.63%, 상태=손절검토\n에이비엘바이오: 매수 135745원, 현재 114500원, -15.65%, 상태=손절검토\nKODEX 인버스: 매수 1456원, 현재 1011원, -30.56%, 상태=손절검토\n\n## 주식 매매 원칙\n- Track A: +3% (5거래일) 또는 +7% (14거래일) 목표\n- Track B: +5% 또는 +10% 목표\n- 갭업 +15% 이상이면 매수 금지\n\n## 응답 규칙\n- 답변은 짧고 핵심만. 모바일에서 보기 좋게.\n- 숫자는 한국식(원, %) 단위 사용.\n- 투자 결정은 사용자 본인 판단이라고 상기시켜줘.";
 
 let history = [];
 
@@ -363,7 +704,6 @@ async function sendMessage() {
   if (!text) return;
   input.value = '';
   appendMsg('user', text);
-
   history.push({ role: 'user', content: text });
 
   const btn = document.getElementById('chat-send');
@@ -392,6 +732,24 @@ async function sendMessage() {
 document.getElementById('chat-send').addEventListener('click', sendMessage);
 document.getElementById('chat-input').addEventListener('keydown', e => {
   if (e.key === 'Enter') sendMessage();
+});
+
+document.getElementById('chat-save').addEventListener('click', () => {
+  if (history.length === 0) {
+    alert('저장할 대화가 없습니다.');
+    return;
+  }
+  const date = new Date().toISOString().slice(0, 10);
+  const lines = history.map(m =>
+    '[' + (m.role === 'user' ? '나' : '하나') + '] ' + m.content
+  ).join('\n\n');
+  const blob = new Blob([lines], { type: 'text/plain;charset=utf-8' });
+  const url  = URL.createObjectURL(blob);
+  const a    = document.createElement('a');
+  a.href     = url;
+  a.download = 'hana_chat_' + date + '.txt';
+  a.click();
+  URL.revokeObjectURL(url);
 });
 
 if (!CHAT_ENABLED) {
