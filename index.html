@@ -181,6 +181,34 @@ body {
   cursor: pointer; font-family: inherit;
 }
 #chat-send:disabled { background: #334155; color: #64748b; cursor: default; }
+/* 대화 기록 뷰어 */
+.log-controls {
+  display: flex; gap: 8px; align-items: center; margin-bottom: 10px;
+}
+.log-date-input {
+  flex: 1; background: #1e293b; border: 1px solid #334155; color: #e2e8f0;
+  padding: 7px 10px; border-radius: 7px; font-size: 13px; font-family: inherit;
+}
+.log-load-btn {
+  background: #1d4ed8; color: #fff; border: none;
+  padding: 7px 14px; border-radius: 7px; font-size: 12px; font-weight: 600;
+  cursor: pointer; font-family: inherit;
+}
+.log-entry {
+  background: #1e293b; border-radius: 8px; padding: 10px 12px;
+  margin-bottom: 8px; border: 1px solid #334155;
+}
+.log-time { font-size: 10px; color: #475569; margin-bottom: 5px; }
+.log-q { font-size: 12px; color: #93c5fd; margin-bottom: 4px; line-height: 1.5; }
+.log-a { font-size: 12px; color: #94a3b8; line-height: 1.5; }
+/* 영구 보존 메모 */
+.perm-entry {
+  background: #1c1c0a; border-radius: 8px; padding: 10px 12px;
+  margin-bottom: 8px; border: 1px solid #854d0e;
+}
+.perm-date { font-size: 10px; color: #a16207; margin-bottom: 5px; }
+.perm-q { font-size: 12px; color: #fde68a; margin-bottom: 4px; line-height: 1.5; }
+.perm-a { font-size: 12px; color: #94a3b8; line-height: 1.5; }
 /* 업데이트 바 */
 .update-bar {
   text-align: center; padding: 14px 0;
@@ -194,7 +222,7 @@ body {
 
 <div class="page-header">
   <div class="page-title">📊 하나 대시보드</div>
-  <div class="page-sub">2026-05-29 22:34 기준 · 자동갱신 08:59 / 12:00 / 15:30</div>
+  <div class="page-sub">2026-05-29 22:45 기준 · 자동갱신 08:59 / 12:00 / 15:30</div>
 </div>
 
 
@@ -340,15 +368,15 @@ body {
   <div class="coin-header">
     <span class="coin-name">ATOM</span>
     <span style='font-size:10px;color:#22c55e;background:#052e16;padding:1px 5px;border-radius:3px'>LIVE</span>
-    <span class="coin-pnl" style="color:#ef4444">-6.68%</span>
+    <span class="coin-pnl" style="color:#ef4444">-6.27%</span>
   </div>
   <div class="coin-body">
     <div class="coin-row2">
       <span class="label2">수량</span><span>35개</span>
       <span class="label2">매수가</span><span>3,164원</span>
-      <span class="label2">현재가</span><span style="color:#ef4444">2,953원</span>
+      <span class="label2">현재가</span><span style="color:#ef4444">2,966원</span>
     </div>
-    <div class="coin-pnl-amt" style="color:#ef4444">평가손익: -7,402원</div>
+    <div class="coin-pnl-amt" style="color:#ef4444">평가손익: -6,948원</div>
     <div class="coin-levels">
       <span class="lvl sl">손절 2,848</span>
       <span class="lvl t1">1차 3,639</span>
@@ -359,15 +387,15 @@ body {
   <div class="coin-header">
     <span class="coin-name">XRP</span>
     <span style='font-size:10px;color:#22c55e;background:#052e16;padding:1px 5px;border-radius:3px'>LIVE</span>
-    <span class="coin-pnl" style="color:#ef4444">-1.06%</span>
+    <span class="coin-pnl" style="color:#ef4444">-0.70%</span>
   </div>
   <div class="coin-body">
     <div class="coin-row2">
       <span class="label2">수량</span><span>35개</span>
       <span class="label2">매수가</span><span>1,946원</span>
-      <span class="label2">현재가</span><span style="color:#ef4444">1,925원</span>
+      <span class="label2">현재가</span><span style="color:#ef4444">1,932원</span>
     </div>
-    <div class="coin-pnl-amt" style="color:#ef4444">평가손익: -721원</div>
+    <div class="coin-pnl-amt" style="color:#ef4444">평가손익: -476원</div>
     <div class="coin-levels">
       <span class="lvl sl">손절 1,751</span>
       <span class="lvl t1">1차 2,237</span>
@@ -378,15 +406,15 @@ body {
   <div class="coin-header">
     <span class="coin-name">NEAR</span>
     <span style='font-size:10px;color:#22c55e;background:#052e16;padding:1px 5px;border-radius:3px'>LIVE</span>
-    <span class="coin-pnl" style="color:#ef4444">-5.28%</span>
+    <span class="coin-pnl" style="color:#ef4444">-3.66%</span>
   </div>
   <div class="coin-body">
     <div class="coin-row2">
       <span class="label2">수량</span><span>30개</span>
       <span class="label2">매수가</span><span>3,769원</span>
-      <span class="label2">현재가</span><span style="color:#ef4444">3,570원</span>
+      <span class="label2">현재가</span><span style="color:#ef4444">3,631원</span>
     </div>
-    <div class="coin-pnl-amt" style="color:#ef4444">평가손익: -5,970원</div>
+    <div class="coin-pnl-amt" style="color:#ef4444">평가손익: -4,140원</div>
     <div class="coin-levels">
       <span class="lvl sl">손절 3,392</span>
       <span class="lvl t1">1차 4,334</span>
@@ -402,7 +430,7 @@ body {
   </div>
   <div style="text-align:right">
     <div class="coin-total-label">평가손익</div>
-    <div class="coin-total-val" style="color:#ef4444">-14,094원 (-4.83%)</div>
+    <div class="coin-total-val" style="color:#ef4444">-11,564원 (-3.96%)</div>
   </div>
 </div>
 
@@ -675,8 +703,20 @@ body {
   <div class='trade-memo'>잔고동기화(합산)</div>
 </div>
 
+<!-- ⑥ 대화 기록 -->
+<div class="section-title">대화 기록</div>
+<div class="log-controls">
+  <input type="date" id="log-date" class="log-date-input" value="2026-05-29">
+  <button class="log-load-btn" onclick="loadLogs()">불러오기</button>
+</div>
+<div id="log-list"><div class='empty-msg'>불러오는 중...</div></div>
+
+<!-- ⑦ 영구 보존 메모 -->
+<div class="section-title">영구 보존 메모 ★</div>
+<div id="perm-list"><div class='empty-msg'>불러오는 중...</div></div>
+
 <div class="update-bar">
-  🔄 마지막 업데이트: <b>2026-05-29 22:34</b><br>
+  🔄 마지막 업데이트: <b>2026-05-29 22:45</b><br>
   다음 업데이트: <span class="next-update">다음 영업일 08:59</span><br>
   <span style="color:#1e3a5f">hanastocknews.com</span>
 </div>
@@ -684,7 +724,7 @@ body {
 <script>
 const CHAT_ENABLED  = true;
 const CHAT_ENDPOINT = "https://easiness-doorstop-flyer.ngrok-free.dev/chat";
-const SYSTEM_PROMPT = "너는 '하나'야. 사용자의 주식/코인 투자를 돕는 AI 어시스턴트야. 친절하고 간결하게 한국어로 답해.\n\n## 현재 코인 포지션 (2026-05-29 22:34 기준)\nATOM: 35개, 매수 3164원, 현재 , -6.68%\nXRP: 35개, 매수 1946원, 현재 , -1.06%\nNEAR: 30개, 매수 3769원, 현재 , -5.28%\n\n## 코인 매매 원칙\n- 손절: 매수가 대비 -10%\n- 1차 익절: +15% (절반 매도)\n- 전량 익절: +25%\n- RSI > 72 이면 전량 매도\n\n## 오늘의 주식 추천 (score 70+)\nNHN: MODERATE, score 96, 매수가 50900원\n삼성SDI: WEAK, score 93, 매수가 688000원\nLG: WEAK, score 88, 매수가 146600원\n삼성SDS: WEAK, score 88, 매수가 299000원\n기업은행: WEAK, score 82, 매수가 20200원\n\n## 보유 주식 포트폴리오\nKODEX 200: 매수 92270원, 현재 134815원, +46.11%, 상태=매도검토\nLG에너지솔루션: 매수 432125원, 현재 457500원, +5.87%, 상태=매도검토\n기아: 매수 163575원, 현재 169500원, +3.62%, 상태=보유중\n두산에너빌리티: 매수 106014원, 현재 106800원, +0.74%, 상태=보유중\n강원랜드: 매수 15009원, 현재 15090원, +0.54%, 상태=보유중\nCJ ENM: 매수 40120원, 현재 39750원, -0.92%, 상태=손실보유\nS-Oil: 매수 108392원, 현재 106800원, -1.47%, 상태=손실보유\nKB금융: 매수 153075원, 현재 150600원, -1.62%, 상태=손실보유\n신한지주: 매수 95541원, 현재 93500원, -2.14%, 상태=손실보유\nKT: 매수 54650원, 현재 53000원, -3.02%, 상태=손실보유\n셀트리온: 매수 202988원, 현재 192800원, -5.02%, 상태=손실보유\n한화솔루션: 매수 43860원, 현재 41600원, -5.15%, 상태=손실보유\n유한양행: 매수 90071원, 현재 85100원, -5.52%, 상태=손실보유\n현대건설: 매수 159137원, 현재 146500원, -7.94%, 상태=손실보유\nHD건설기계: 매수 166535원, 현재 151100원, -9.27%, 상태=손실보유\nSK이노베이션: 매수 131836원, 현재 119300원, -9.51%, 상태=손실보유\n우리금융지주: 매수 33302원, 현재 29800원, -10.52%, 상태=손절검토\n포스코인터내셔널: 매수 72137원, 현재 64000원, -11.28%, 상태=손절검토\n기업은행: 매수 22837원, 현재 20100원, -11.98%, 상태=손절검토\n한화시스템: 매수 119832원, 현재 104700원, -12.63%, 상태=손절검토\n한국전력: 매수 44818원, 현재 38950원, -13.09%, 상태=손절검토\n알테오젠: 매수 431061원, 현재 368000원, -14.63%, 상태=손절검토\n에이비엘바이오: 매수 135745원, 현재 114500원, -15.65%, 상태=손절검토\nKODEX 인버스: 매수 1456원, 현재 1011원, -30.56%, 상태=손절검토\n\n## 주식 매매 원칙\n- Track A: +3% (5거래일) 또는 +7% (14거래일) 목표\n- Track B: +5% 또는 +10% 목표\n- 갭업 +15% 이상이면 매수 금지\n\n## 응답 규칙\n- 답변은 짧고 핵심만. 모바일에서 보기 좋게.\n- 숫자는 한국식(원, %) 단위 사용.\n- 투자 결정은 사용자 본인 판단이라고 상기시켜줘.";
+const SYSTEM_PROMPT = "너는 '하나'야. 사용자의 주식/코인 투자를 돕는 AI 어시스턴트야. 친절하고 간결하게 한국어로 답해.\n\n## 현재 코인 포지션 (2026-05-29 22:45 기준)\nATOM: 35개, 매수 3164원, 현재 , -6.27%\nXRP: 35개, 매수 1946원, 현재 , -0.70%\nNEAR: 30개, 매수 3769원, 현재 , -3.66%\n\n## 코인 매매 원칙\n- 손절: 매수가 대비 -10%\n- 1차 익절: +15% (절반 매도)\n- 전량 익절: +25%\n- RSI > 72 이면 전량 매도\n\n## 오늘의 주식 추천 (score 70+)\nNHN: MODERATE, score 96, 매수가 50900원\n삼성SDI: WEAK, score 93, 매수가 688000원\nLG: WEAK, score 88, 매수가 146600원\n삼성SDS: WEAK, score 88, 매수가 299000원\n기업은행: WEAK, score 82, 매수가 20200원\n\n## 보유 주식 포트폴리오\nKODEX 200: 매수 92270원, 현재 134815원, +46.11%, 상태=매도검토\nLG에너지솔루션: 매수 432125원, 현재 457500원, +5.87%, 상태=매도검토\n기아: 매수 163575원, 현재 169500원, +3.62%, 상태=보유중\n두산에너빌리티: 매수 106014원, 현재 106800원, +0.74%, 상태=보유중\n강원랜드: 매수 15009원, 현재 15090원, +0.54%, 상태=보유중\nCJ ENM: 매수 40120원, 현재 39750원, -0.92%, 상태=손실보유\nS-Oil: 매수 108392원, 현재 106800원, -1.47%, 상태=손실보유\nKB금융: 매수 153075원, 현재 150600원, -1.62%, 상태=손실보유\n신한지주: 매수 95541원, 현재 93500원, -2.14%, 상태=손실보유\nKT: 매수 54650원, 현재 53000원, -3.02%, 상태=손실보유\n셀트리온: 매수 202988원, 현재 192800원, -5.02%, 상태=손실보유\n한화솔루션: 매수 43860원, 현재 41600원, -5.15%, 상태=손실보유\n유한양행: 매수 90071원, 현재 85100원, -5.52%, 상태=손실보유\n현대건설: 매수 159137원, 현재 146500원, -7.94%, 상태=손실보유\nHD건설기계: 매수 166535원, 현재 151100원, -9.27%, 상태=손실보유\nSK이노베이션: 매수 131836원, 현재 119300원, -9.51%, 상태=손실보유\n우리금융지주: 매수 33302원, 현재 29800원, -10.52%, 상태=손절검토\n포스코인터내셔널: 매수 72137원, 현재 64000원, -11.28%, 상태=손절검토\n기업은행: 매수 22837원, 현재 20100원, -11.98%, 상태=손절검토\n한화시스템: 매수 119832원, 현재 104700원, -12.63%, 상태=손절검토\n한국전력: 매수 44818원, 현재 38950원, -13.09%, 상태=손절검토\n알테오젠: 매수 431061원, 현재 368000원, -14.63%, 상태=손절검토\n에이비엘바이오: 매수 135745원, 현재 114500원, -15.65%, 상태=손절검토\nKODEX 인버스: 매수 1456원, 현재 1011원, -30.56%, 상태=손절검토\n\n## 주식 매매 원칙\n- Track A: +3% (5거래일) 또는 +7% (14거래일) 목표\n- Track B: +5% 또는 +10% 목표\n- 갭업 +15% 이상이면 매수 금지\n\n## 응답 규칙\n- 답변은 짧고 핵심만. 모바일에서 보기 좋게.\n- 숫자는 한국식(원, %) 단위 사용.\n- 투자 결정은 사용자 본인 판단이라고 상기시켜줘.";
 
 let history = [];
 
@@ -756,6 +796,54 @@ if (!CHAT_ENABLED) {
   document.getElementById('chat-input').disabled = true;
   document.getElementById('chat-send').disabled  = true;
 }
+
+// ── 대화 기록 / 영구 보존 ──────────────────────────────────────
+const LOG_BASE = CHAT_ENDPOINT.replace('/chat', '');
+
+async function loadLogs() {
+  const date = document.getElementById('log-date').value;
+  const list = document.getElementById('log-list');
+  if (!date || !CHAT_ENABLED) { list.innerHTML = "<div class='empty-msg'>채팅 서버 미연결</div>"; return; }
+  list.innerHTML = "<div class='empty-msg'>로딩 중...</div>";
+  try {
+    const res  = await fetch(LOG_BASE + '/logs?date=' + date);
+    const data = await res.json();
+    if (!data.length) { list.innerHTML = "<div class='empty-msg'>해당 날짜 대화 없음</div>"; return; }
+    list.innerHTML = data.map(e => 
+      <div class="log-entry">
+        <div class="log-time"></div>
+        <div class="log-q">나: </div>
+        <div class="log-a">하나: </div>
+      </div>
+    ).join('');
+  } catch(err) {
+    list.innerHTML = "<div class='empty-msg'>로드 실패 (서버 꺼짐?)</div>";
+  }
+}
+
+async function loadPermanent() {
+  const list = document.getElementById('perm-list');
+  if (!CHAT_ENABLED) { list.innerHTML = "<div class='empty-msg'>채팅 서버 미연결</div>"; return; }
+  try {
+    const res  = await fetch(LOG_BASE + '/logs/permanent');
+    const data = await res.json();
+    if (!data.length) { list.innerHTML = "<div class='empty-msg'>영구 보존 메모 없음<br><small style='color:#334155'>대화 중 '기억해줘'라고 하면 저장됩니다</small></div>"; return; }
+    list.innerHTML = data.slice().reverse().map(e => 
+      <div class="perm-entry">
+        <div class="perm-date"> </div>
+        <div class="perm-q">나: </div>
+        <div class="perm-a">하나: </div>
+      </div>
+    ).join('');
+  } catch(err) {
+    list.innerHTML = "<div class='empty-msg'>로드 실패 (서버 꺼짐?)</div>";
+  }
+}
+
+window.addEventListener('load', () => {
+  loadLogs();
+  loadPermanent();
+});
 </script>
 
 </body>
